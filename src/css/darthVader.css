@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Star Jedi";
+    src: url(../fontes/Starjedi.ttf);
+}
+
+body {
+    background-image: url(../imagens/estrelas.png);
+    background-attachment: fixed;
+    background-color: #1a1a1a;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sobreposição escura */
+    z-index: -1; /* Fica atrás do conteúdo */
+}
+
+header{
+    margin: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #222;
+    
+}
+
+header h1{
+    font-family: "Star Jedi", Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+header h1, .texto p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 1.5em;
+    padding-left: 30px;
+    letter-spacing: 1.5px;
+}
+
+.texto{
+    background-color: #171717;
+    color: white;
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 56vh; /* Altura igual à altura da janela de visualização */
+    max-width: 1100px;
+    margin: auto;
+    border-left: 1px solid yellow;
+    border-right: 1px solid yellow;
+}
+
+.texto p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 60vw;
+    text-align: justify;
+}
+
+.imagem {
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 100vh; /* Altura igual à altura da janela de visualização */
+    max-width: 1100px;
+    margin: auto;
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    background-position: center; /* Centraliza a imagem no elemento */
+    box-shadow: inset 8px 8px 15px black;
+    border-left: 1px solid yellow;
+    border-right: 1px solid yellow;
+}
+
+.imagem p {
+    padding: 10px; /* Ajuste o padding para ser mais flexível */
+    max-width: 60%; /* Reduz o tamanho máximo da largura */
+    margin: 10px auto; /* Centraliza o elemento horizontalmente */
+    background-position: right center;
+    background-color: rgba(0, 0, 0, 0.432);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    box-sizing: border-box; /* Garante que o padding e a largura se ajustem corretamente */
+}
+
+#img01 {
+    background-image: url(../imagens/anakin.jpg);
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    background-position: center; /* Centraliza a imagem no elemento */
+    background-attachment: fixed;
+}
+
+#img02{
+    background-image: url(../imagens/darth-vader.jpg);
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    background-position: top center; /* Centraliza a imagem no elemento */
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .texto p {
+        padding-top: 0px;
+        font-size: 0.9em;
+    }
+
+    .imagem {
+        height: auto; /* Deixa a altura ser determinada pelo conteúdo */
+        background-size: contain; /* Garante que a imagem inteira seja visível */
+    }
+
+    .imagem p {
+        font-size: 0.9em; /* Reduz o tamanho da fonte em telas menores */
+        padding: 5px; /* Reduz o padding em telas menores */
+    }
+
+    footer {
+        font-size: 0.9em; /* Reduz o tamanho da fonte em telas menores */
+        padding: 15px 10px; /* Ajusta o padding */
+    }
+
+    footer a {
+        font-size: 0.9em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .back-link {
+        font-size: 0.8em; /* Ajusta o tamanho da fonte em telas menores */
+        padding: 8px 16px; /* Ajusta o padding */
+    }
+}
+
+
+.back-link {
+    position: fixed; /* Fixa o link na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância do lado direito da tela */
+    background-color: yellow; /* Cor de fundo do link */
+    color: black; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-family: "Star Jedi", Arial, Helvetica, sans-serif; /* Fonte personalizada */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para hover */
+}
+
+.back-link:hover {
+    background-color: orange; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+footer {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+    text-align: center;
+    padding: 10px; /* Ajusta o padding para ser mais responsivo */
+    border-top: 2px solid;
+    box-sizing: border-box; /* Garante que o padding se ajuste corretamente */
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: yellow;
+    font-size: 1em; /* Tamanho padrão da fonte */
+    transition: color 0.3s ease;
+}
+

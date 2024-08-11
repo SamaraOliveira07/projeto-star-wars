@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Black Elite DEMO";
+    src: url(../fontes/BlackEliteGrungeDemo-yYBM5.ttf);
+}
+
+@font-face {
+    font-family: "Star Jedi Outline";
+    src: url(../fontes/Starjout.ttf);
+}
+
+@font-face {
+    font-family: "Star Jedi";
+    src: url(../fontes/Starjedi.ttf);
+}
+
+#container{
+    background-color: black;
+    background-image: url("../imagens/estrelas.png");
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir todo o espaço */
+    background-attachment: fixed;
+    position: relative;
+    height: 97.3vh; /* Ocupa toda a altura da viewport */
+    padding: 10px;
+}
+
+#conteudo{
+    background-color: black;
+    background-size: 100% 100%;
+    border: 1px solid darkgoldenrod;
+    position: absolute;
+    width: 90%; /* Ocupe 90% da largura da tela */
+    max-width: 1300px; /* Limite máximo da largura */
+    height: 80%; /* Altura ajustável */
+    max-height: 650px; /* Limite máximo da altura */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; /* Adicione espaço interno para melhorar a aparência */
+}
+
+article h1{
+    font-family: "Star Jedi Outline", Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    color: yellow;
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 4px;
+
+}
+
+article p{
+    font-family: "Star Jedi", Arial, Helvetica, sans-serif;
+    color: yellow;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+#menu{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 180px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    text-align: center; /* Centraliza o texto do menu */
+
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        padding-top: 100px;
+    }
+    article h1 {
+        font-size: 2.5em;
+    }
+    article p {
+        font-size: 1.5em;
+    }
+    a {
+        font-size: large;
+    }
+}
+
+a{
+    display: block;
+    padding-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Black Elite DEMO", Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: yellow;
+}
+
+a:hover{
+    color: darkgoldenrod;
+}
